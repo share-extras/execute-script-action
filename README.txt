@@ -74,6 +74,10 @@ of the file.
 Once you have made these changes you will need to restart Tomcat so that the 
 configuration and your classpath resources in the JAR file are picked up.
 
+Note: If you want the action to appear in the repository browsing pages or in 
+Web Quick Start or DOD sites, you will also need to update the corresponding 
+`.config.xml` and `.head.ftl` files for those page components.
+
 Usage
 -----
 
