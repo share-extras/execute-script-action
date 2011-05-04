@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Execute Script Action</shortname>
+  <description>Execute script content module primarily for Document Library</description>
+  <url>/extras/modules/documentlibrary/execute-script</url>
+</webscript>

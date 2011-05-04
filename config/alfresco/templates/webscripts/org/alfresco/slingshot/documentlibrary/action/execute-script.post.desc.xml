@@ -1,0 +1,9 @@
+<webscript>
+  <shortname>Execute Script Action</shortname>
+  <description>Document List Action - Execute script against document(s)</description>
+  <url>/slingshot/doclib/action/execute-script/site/{siteId}/{containerId}?lat={lat}&amp;lon={lon}</url>
+  <url>/slingshot/doclib/action/execute-script/node/{store_type}/{store_id}/{id}?lat={lat}&amp;lon={lon}</url>
+  <format default="json">argument</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>
