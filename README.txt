@@ -25,7 +25,7 @@ directory.
 The command should build a JAR file named execute-script-action.jar
 in the 'dist' directory within your project.
 
-To deploy the dashlet files into a local Tomcat instance for testing, you can 
+To deploy the add-on files into a local Tomcat instance for testing, you can 
 use the hotcopy-tomcat-jar task. You will need to set the tomcat.home
 property in Ant.
 
@@ -42,7 +42,7 @@ in Tomcat’s shared/classes to override it. You should see a section
 <actionSet id="document"> which defines all the actions shown for a normal 
 document in the document list view.
 
-To add the backup action to this list, add the following line just before the 
+To add the action to this list, add the following line just before the 
 </actionset> element for that block.
 
 <action type="action-link" id="onActionExecuteScript" permission="edit" label="actions.document.execute-script" />
