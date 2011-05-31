@@ -10,7 +10,7 @@ be configured into the Document Library component of Alfresco Share.
 Installation
 ------------
 
-The dashlet has been developed to install on top of an existing Alfresco
+The action has been developed to install on top of an existing Alfresco
 3.3/3.4 installation.
 
 An Ant build script is provided to build a JAR file containing the 
@@ -22,7 +22,7 @@ directory.
 
     ant clean dist-jar
 
-The command should build a JAR file named document-geographic-details.jar
+The command should build a JAR file named execute-script-action.jar
 in the 'dist' directory within your project.
 
 To deploy the dashlet files into a local Tomcat instance for testing, you can 
