@@ -1,0 +1,20 @@
+<alfresco-config>
+   
+    <config evaluator="string-compare" condition="DocLibCustom">   
+        <dependencies>
+            <!-- Geotag action dependencies -->
+            <css src="/extras/components/documentlibrary/execute-script-action.css" />
+            <js src="/extras/components/documentlibrary/execute-script-action.js" />
+        </dependencies> 
+    </config>
+	
+    <config evaluator="string-compare" condition="DocLibActions">
+        <actions>
+            <!-- Execute script action definition -->
+            <action id="org_sharextras_execute-script" type="javascript" label="actions.document.execute-script" icon="../../../extras/components/documentlibrary/execute-script">
+                <param name="function">onActionExecuteScript</param>
+            </action>
+        </actions>
+    </config>
+
+</alfresco-config>
