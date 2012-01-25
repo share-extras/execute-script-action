@@ -35,6 +35,7 @@
       actionName: "onActionExecuteScript",
       fn: function DL_onActionGeotag(asset)
       {
+          // We could also call alfresco/api/action/script/formprocessor with JSON params alf_destination and prop_script-ref
           var nodeRef = asset.nodeRef,
              displayName = asset.displayName,
              actionUrl = Alfresco.constants.PROXY_URI + $combine("slingshot/doclib/action/execute-script/node", nodeRef.replace(":/", ""));
