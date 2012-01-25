@@ -17,6 +17,12 @@
     */
    var $html = Alfresco.util.encodeHTML,
       $combine = Alfresco.util.combinePaths;
+
+   /**
+    * Preferences
+    */
+   var PREFERENCES_DASHLET = "org.alfresco.share.documentlibrary.actions",
+      PREF_SCRIPT_REF = PREFERENCES_DASHLET + ".executeScriptRef";
    
    /**
     * Execute a script against a document.
@@ -32,6 +38,9 @@
           var nodeRef = asset.nodeRef,
              displayName = asset.displayName,
              actionUrl = Alfresco.constants.PROXY_URI + $combine("slingshot/doclib/action/execute-script/node", nodeRef.replace(":/", ""));
+
+          // Preferences service
+          this.services.preferences = new Alfresco.service.Preferences();
           
           // Always create a new instance
           this.modules.executeScript = new Alfresco.module.SimpleDialog(this.id + "-executeScript").setOptions(
@@ -44,7 +53,9 @@
              {
                 fn: function dlA_onActionExecuteScript_success(response)
                 {
-                   // TODO Persist script to prefs service
+                   var select = Dom.get(this.id + "-executeScript-script");
+                   // Persist script to prefs service
+                   this.services.preferences.set(PREF_SCRIPT_REF, select.options[select.selectedIndex].value);
                    YAHOO.Bubbling.fire("metadataRefresh",
                    {
                       highlightFile: displayName
@@ -77,7 +88,6 @@
                       return field.options[field.selectedIndex].value !== "-";
                    }, null, "change");
                    p_form.setShowSubmitStateDynamically(true, false);
-                   // TODO Retrieve last-actioned script from prefs service
                 },
                 scope: this
              }

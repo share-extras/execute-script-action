@@ -1,3 +1,4 @@
+<#assign scriptRef=preferences.executeScriptRef!"">
 <#assign el=args.htmlid?html>
 <div id="${el}-dialog" class="execute-script-dialog">
    <div id="${el}-dialogTitle" class="hd">${msg("title")}</div>
@@ -9,7 +10,7 @@
                <select id="${el}-script" type="text" name="script" tabindex="0">
                   <option value="-">${msg("label.select")}</option>
                <#list scripts as s>
-                  <option value="${s.nodeRef}">${s.displayName}</option>
+                  <option value="${s.nodeRef}"<#if scriptRef == s.nodeRef> selected="selected"</#if>>${s.displayName}</option>
                </#list>
                </select>&nbsp;*
             </div>
