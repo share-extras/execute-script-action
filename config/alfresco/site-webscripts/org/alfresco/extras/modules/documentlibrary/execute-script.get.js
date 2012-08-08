@@ -2,7 +2,7 @@ const PREFERENCES_ROOT = "org.alfresco.share.documentlibrary.actions";
 
 function main()
 {
-   var json = remote.call("/slingshot/doclib/doclist/documents/node/alfresco/company/home/Data%20Dictionary/Scripts"),
+   var json = remote.call("/extras/doclib/action/list-scripts"),
       jsonObj = eval('(' + json + ')'),
       items = jsonObj.items, 
       preferences = {};

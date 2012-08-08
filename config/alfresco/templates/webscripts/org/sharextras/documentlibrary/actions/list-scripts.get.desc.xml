@@ -1,0 +1,7 @@
+<webscript>
+   <shortname>List Script Files</shortname>
+   <description>List JavaScript files in the Scripts space inside the Data Dictionary</description>
+   <url>/extras/doclib/action/list-scripts</url>
+   <format default="json">argument</format>
+   <authentication>user</authentication>
+</webscript>
